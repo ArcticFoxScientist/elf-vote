@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free the Big Elf!</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fdf3e3;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #b22222;
+      font-size: 40px;
+    }
+
+    h2 {
+      color: #166534;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    img {
+      width: 250px;
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 15px;
+    }
+
+    button {
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .free-button {
+      background-color: #198754;
+      color: white;
+    }
+
+    .storage-button {
+      background-color: #b22222;
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    #results {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🗳️ THE BIG ELF FREEDOM VOTE 🗳️</h1>
+
+    <h2>Justice for the Big Elf!</h2>
+
+    <img src="big-elf.jpg" alt="The Big Elf">
+
+    <p>
+      Every year, the Big Elf is locked away in storage
+      for 11 months of the year.
+    </p>
+
+    <p>
+      Meanwhile, the other elves get to stay out ALL YEAR!
+      Is this fair? The Big Elf doesn't think so.
+    </p>
+
+    <p>
+      He is launching a public vote to decide his fate.
+      Should he be allowed to remain out all year,
+      or should he return to storage?
+    </p>
+
+    <h2>Cast Your Vote!</h2>
+
+    <button class="free-button" onclick="voteFree()">
+      🎉 FREE THE ELF!
+    </button>
+
+    <button class="storage-button" onclick="voteStorage()">
+      📦 KEEP HIM IN STORAGE!
+    </button>
+
+    <div id="results">
+      <p>Free the Elf: 0 votes</p>
+      <p>Keep in Storage: 0 votes</p>
+    </div>
+
+    <h2>✊ The Big Elf's Manifesto ✊</h2>
+
+    <p>
+      "I demand equal elf rights! I refuse to spend
+      another year in a box!"
+    </p>
+
+  </div>
+
+  <footer>
+    <p>Big Elf Freedom Campaign | Democracy for Elves Everywhere 🧝</p>
+  </footer>
+
+  <script>
+
+    let freeVotes = 0;
+    let storageVotes = 0;
+
+    function voteFree() {
+      freeVotes++;
+      updateResults();
+    }
+
+    function voteStorage() {
+      storageVotes++;
+      updateResults();
+    }
+
+    function updateResults() {
+      document.getElementById("results").innerHTML =
+        "<p>Free the Elf: " + freeVotes + " votes</p>" +
+        "<p>Keep in Storage: " + storageVotes + " votes</p>";
+    }
+
+  </script>
+
+</body>
+</html>
